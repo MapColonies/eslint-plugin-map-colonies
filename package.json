@@ -1,7 +1,7 @@
 {
-  "name": "eslint-plugin-map-colonies",
+  "name": "@map-colonies/eslint-config",
   "version": "1.0.0",
-  "description": "eslint plugin for map colonies organization",
+  "description": "eslint configs for map colonies organization",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MapColonies/eslint-plugin-map-colonies.git"
+    "url": "git+https://github.com/MapColonies/eslint-config.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MapColonies/eslint-plugin-map-colonies/issues"
+    "url": "https://github.com/MapColonies/eslint-config/issues"
   },
-  "homepage": "https://github.com/MapColonies/eslint-plugin-map-colonies#readme",
+  "homepage": "https://github.com/MapColonies/eslint-config#readme",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
@@ -26,6 +26,17 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "peerDependencies": {
+    "eslint": "^7.0.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "3.6.1",
+    "@typescript-eslint/parser": "3.6.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
