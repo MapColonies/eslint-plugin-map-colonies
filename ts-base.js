@@ -1,10 +1,48 @@
+const namingConventions = [
+  'error',
+  {
+    selector: 'default',
+    format: ['camelCase'],
+  },
+
+  {
+    selector: 'variable',
+    format: ['camelCase', 'UPPER_CASE'],
+  },
+  {
+    selector: 'variable',
+    format: ['PascalCase'],
+    custom: {
+      regex: '^.*Provider$',
+      match: false,
+    },
+  },
+  {
+    selector: 'parameter',
+    format: ['camelCase'],
+    leadingUnderscore: 'allow',
+  },
+
+  {
+    selector: 'memberLike',
+    modifiers: ['private'],
+    format: ['camelCase'],
+    // leadingUnderscore: 'require',
+  },
+
+  {
+    selector: 'typeLike',
+    format: ['PascalCase'],
+  },
+];
+
 module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    "prettier",
-    "prettier/@typescript-eslint",
+    'prettier',
+    'prettier/@typescript-eslint',
   ],
   plugins: ['import', '@typescript-eslint'],
   parser: '@typescript-eslint/parser',
@@ -17,10 +55,34 @@ module.exports = {
     es6: true,
     node: true,
   },
+  // overrides for TSX (mostly for react)
+  overrides: [
+    {
+      files: ['**/*.tsx'],
+      rules: {
+        '@typescript-eslint/naming-convention': [
+          ...namingConventions,
+          {
+            selector: 'variable',
+            types: ['function'],
+            format: ['camelCase', 'PascalCase'],
+          },
+        ],
+      },
+    },
+    // overrides for unit tests
+    {
+      files: ['**/*.spec.ts?(x)', '**/*.test.ts?(x)'],
+      rules: {
+        '@typescript-eslint/no-magic-numbers': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+      },
+    },
+  ],
   rules: {
     '@typescript-eslint/array-type': ['error', { default: 'array' }],
 
-    '@typescript-eslint/ban-ts-comment': 'error',
+    '@typescript-eslint/ban-ts-comment': 'warn',
 
     '@typescript-eslint/ban-tslint-comment': 'error',
 
@@ -36,36 +98,10 @@ module.exports = {
 
     '@typescript-eslint/method-signature-style': 'error',
 
+    '@typescript-eslint/no-empty-interface': 'off',
+
     camelcase: 'off',
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        selector: 'default',
-        format: ['camelCase'],
-      },
-
-      {
-        selector: 'variable',
-        format: ['camelCase', 'UPPER_CASE'],
-      },
-      {
-        selector: 'parameter',
-        format: ['camelCase'],
-        leadingUnderscore: 'allow',
-      },
-
-      {
-        selector: 'memberLike',
-        modifiers: ['private'],
-        format: ['camelCase'],
-        // leadingUnderscore: 'require',
-      },
-
-      {
-        selector: 'typeLike',
-        format: ['PascalCase'],
-      },
-    ],
+    '@typescript-eslint/naming-convention': namingConventions,
 
     '@typescript-eslint/no-base-to-string': 'warn',
 
@@ -74,8 +110,6 @@ module.exports = {
     '@typescript-eslint/no-extraneous-class': 'warn',
 
     '@typescript-eslint/no-throw-literal': 'error',
-
-    // '@typescript-eslint/no-type-alias': check more
 
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
 
@@ -101,7 +135,14 @@ module.exports = {
 
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
 
-    '@typescript-eslint/no-magic-numbers': 'error',
+    '@typescript-eslint/no-magic-numbers': [
+      error,
+      {
+        ignoreArrayIndexes: true,
+        ignore: [1],
+        ignoreNumericLiteralTypes: true,
+      },
+    ],
 
     '@typescript-eslint/default-param-last': 'error',
 
