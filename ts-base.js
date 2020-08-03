@@ -136,7 +136,7 @@ module.exports = {
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
 
     '@typescript-eslint/no-magic-numbers': [
-      error,
+      'error',
       {
         ignoreArrayIndexes: true,
         ignore: [1],
