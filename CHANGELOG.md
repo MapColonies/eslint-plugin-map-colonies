@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/MapColonies/eslint-config/compare/v1.0.0...v1.0.1) (2020-08-03)
+
+
+### Bug Fixes
+
+* **ts-base:** fixed PR ([8b4cb52](https://github.com/MapColonies/eslint-config/commit/8b4cb529c4e2047909d9a983ff6a0e45ed23b666))
+* **ts-base:** tweaked rules based on conflict-ui integration ([9b020c1](https://github.com/MapColonies/eslint-config/commit/9b020c1370109df9535cc9ea5fb621fc8c21aae0))
+
 ## 1.0.0 (2020-08-02)
 
 
