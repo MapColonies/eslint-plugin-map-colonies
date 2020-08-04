@@ -12,9 +12,9 @@ const namingConventions = [
   {
     selector: 'variable',
     format: ['PascalCase'],
-    custom: {
+    filter: {
       regex: '^.*Provider$',
-      match: false,
+      match: true,
     },
   },
   {
@@ -22,14 +22,16 @@ const namingConventions = [
     format: ['camelCase'],
     leadingUnderscore: 'allow',
   },
-
   {
     selector: 'memberLike',
     modifiers: ['private'],
     format: ['camelCase'],
     // leadingUnderscore: 'require',
   },
-
+  {
+    selector: 'enumMember',
+    format: ['UPPER_CASE']
+  },
   {
     selector: 'typeLike',
     format: ['PascalCase'],
