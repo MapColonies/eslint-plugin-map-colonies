@@ -30,7 +30,7 @@ const namingConventions = [
   },
   {
     selector: 'enumMember',
-    format: ['UPPER_CASE']
+    format: ['UPPER_CASE'],
   },
   {
     selector: 'typeLike',
@@ -70,6 +70,13 @@ module.exports = {
             format: ['camelCase', 'PascalCase'],
           },
         ],
+      },
+    },
+    // overrides for storybook
+    {
+      files: ['**/*.stories.ts?(x)'],
+      rules: {
+        '@typescript-eslint/no-magic-numbers': 'off',
       },
     },
     // overrides for unit tests
@@ -141,7 +148,7 @@ module.exports = {
       'error',
       {
         ignoreArrayIndexes: true,
-        ignore: [1],
+        ignore: [1, 0],
         ignoreNumericLiteralTypes: true,
       },
     ],
@@ -153,5 +160,7 @@ module.exports = {
     '@typescript-eslint/no-unused-expressions': 'error',
 
     '@typescript-eslint/return-await': 'error',
+    
+    'import/order': 'error',
   },
 };
