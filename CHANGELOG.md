@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/MapColonies/eslint-config/compare/v1.1.0...v2.0.0) (2020-12-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** changed deps for typescript 4 versions (#11)
+
+### build
+
+* **deps:** changed deps for typescript 4 versions ([#11](https://github.com/MapColonies/eslint-config/issues/11)) ([4bd9177](https://github.com/MapColonies/eslint-config/commit/4bd9177fe07eec16a557f9178aa4cf1723feb167))
+
 ## [1.1.0](https://github.com/MapColonies/eslint-config/compare/v1.0.3...v1.1.0) (2020-09-02)
 
 
