@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-0](https://github.com/MapColonies/eslint-config/compare/v2.0.0...v2.1.0-0) (2021-01-13)
+
+
+### Features
+
+* added more bracket rules ([317dc7a](https://github.com/MapColonies/eslint-config/commit/317dc7a8680cb05259b5a78651f83e8c41638816))
+
 ## [2.0.0](https://github.com/MapColonies/eslint-config/compare/v1.1.0...v2.0.0) (2020-12-15)
 
 
