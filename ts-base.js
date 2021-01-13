@@ -109,7 +109,16 @@ module.exports = {
 
     '@typescript-eslint/no-empty-interface': 'off',
 
+    'brace-style': 'off',
+
+    '@typescript-eslint/brace-style': ['error'],
+
+    curly: 'error',
+
     camelcase: 'off',
+
+    'no-lonely-if': 'error',
+
     '@typescript-eslint/naming-convention': namingConventions,
 
     '@typescript-eslint/no-base-to-string': 'warn',
@@ -160,7 +169,13 @@ module.exports = {
     '@typescript-eslint/no-unused-expressions': 'error',
 
     '@typescript-eslint/return-await': 'error',
-    
+
     'import/order': 'error',
+
+    'import/first': 'error',
+
+    'import/exports-last': 'error',
+
+    'import/newline-after-import' : 'error'
   },
 };
