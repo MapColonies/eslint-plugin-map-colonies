@@ -170,7 +170,7 @@ module.exports = {
 
     '@typescript-eslint/no-unused-vars': [
       'error',
-      { ignoreRestSiblings: false },
+      { ignoreRestSiblings: true },
     ],
 
     '@typescript-eslint/return-await': 'error',
