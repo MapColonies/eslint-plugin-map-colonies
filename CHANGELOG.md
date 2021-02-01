@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/MapColonies/eslint-config/compare/v2.1.0...v2.2.0) (2021-02-01)
+
+
+### Features
+
+* **ts-base:** added no-unused-vars ([#14](https://github.com/MapColonies/eslint-config/issues/14)) ([4a29a0e](https://github.com/MapColonies/eslint-config/commit/4a29a0e1d7f5b3fb680b947d0ca5f3a7380a1206))
+
 ## [2.1.0](https://github.com/MapColonies/eslint-config/compare/v2.1.0-0...v2.1.0) (2021-01-13)
 
 ## [2.1.0-0](https://github.com/MapColonies/eslint-config/compare/v2.0.0...v2.1.0-0) (2021-01-13)
