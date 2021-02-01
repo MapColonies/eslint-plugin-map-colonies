@@ -168,6 +168,11 @@ module.exports = {
 
     '@typescript-eslint/no-unused-expressions': 'error',
 
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { ignoreRestSiblings: true },
+    ],
+
     '@typescript-eslint/return-await': 'error',
 
     'import/order': 'error',
@@ -176,6 +181,6 @@ module.exports = {
 
     'import/exports-last': 'error',
 
-    'import/newline-after-import' : 'error'
+    'import/newline-after-import': 'error',
   },
 };
