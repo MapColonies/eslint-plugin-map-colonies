@@ -36,7 +36,7 @@
     "eslint-config-prettier": "^7.0.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jest": "^24.0.0"
+    "eslint-plugin-jest": "^24.3.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
